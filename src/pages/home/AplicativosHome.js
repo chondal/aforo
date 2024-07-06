@@ -19,8 +19,8 @@ const AplicativosHome = () => {
                 </Col>
             </Row>
             <Row className='mb-2 animate__animated animate__fadeIn animate_fadeOut'>
-                <CredencialApp user={user} />
-                <RecibosApp user={user} />
+                {/* <CredencialApp user={user} />
+                <RecibosApp user={user} /> */}
             </Row>
         </>
     )

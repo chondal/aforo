@@ -13,7 +13,6 @@ const FooterLayoutFixed = ({back}) => {
     const handleLogOut = async () => {       
         window.localStorage.clear()
         dispatch({ type: types.logout, payload: {} })
-        window.location = process.env.REACT_APP_LOGOUT_URL
     }
 
     return(

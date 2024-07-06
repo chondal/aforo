@@ -17,7 +17,7 @@ body{
 }
 
 .list-group a :hover{
-  color: #7c7c75;
+  color: #153244;
 }
 
 .App-header {
@@ -60,7 +60,7 @@ body{
 }
 
 .border-legis{
-  border: solid 1px #7c7c75
+  border: solid 1px #153244
 }
 .border-bottom-legis{
   border-bottom: solid 1px rgba(134, 101, 224, .25);
@@ -70,7 +70,7 @@ body{
 }
 
 .btn-legis{
-  background-color: #7c7c75 !important;
+  background-color: #153244 !important;
   border: none !important;
 }
 
@@ -79,7 +79,7 @@ body{
 }
 
 .bg-legis-default{
-  background-color: #7c7c75 !important;
+  background-color: #153244 !important;
 }
 
 footer.footer {
