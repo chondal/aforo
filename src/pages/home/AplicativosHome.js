@@ -2,8 +2,9 @@ import { IoGridOutline } from "react-icons/io5";
 import { Row, Col } from 'react-bootstrap'
 import { useContext } from "react";
 import { AuthContext } from "../../auth/authContext";
-import RecibosApp from "./aplicativos/RecibosApp";
-import CredencialApp from "./aplicativos/CredencialApp";
+import AforoCounter from "./aplicativos/AforoCounter";
+import IngresosApp from "./aplicativos/IngresosApp";
+import EgresosApp from "./aplicativos/EgresosApp";
 
 const AplicativosHome = () => {
     
@@ -14,13 +15,14 @@ const AplicativosHome = () => {
             <Row className='mb-2'>
                 <Col xs={12}>
                     <h5 id="bienvenido" className='fw-light border-bottom border-gray pb-2'>
-                        <IoGridOutline /> Aforo
+                        <IoGridOutline /> Bienvenido
                     </h5>
                 </Col>
             </Row>
             <Row className='mb-2 animate__animated animate__fadeIn animate_fadeOut'>
-                {/* <CredencialApp user={user} />
-                <RecibosApp user={user} /> */}
+                <AforoCounter user={user} />
+                <IngresosApp />
+                <EgresosApp />
             </Row>
         </>
     )
