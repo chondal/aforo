@@ -1,0 +1,39 @@
+/* estilos calendar */
+.fc-list-day-text {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+  .fc-col-header-cell-cushion {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+  .fc-daygrid-day-frame{
+    background-color: rgb(250, 249, 251);
+  }
+  .fc-list-day-side-text{
+    color: black;
+    text-decoration: none;
+  }
+  .fc-event-time{
+    color: black;
+  }
+  .fc-event-title{
+    color: black;
+    font-weight: 100 !important;
+  }
+  .fc-event-future{
+    color: black !important;
+  }
+  .fc-event-past{
+    color: grey !important;
+  }
+
+  .fc-button-primary{
+    background-color: #e2e3e5 !important;
+    border: #d3d6d8 solid 1px !important;
+    color: #41464b !important;
+  }
+  
+  
