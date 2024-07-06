@@ -31,7 +31,7 @@ const HeaderLayout = () => {
                     >
                     <Offcanvas.Header className='border-bottom border-light bg-light' closeButton>
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${false}`}>
-                        <IoPersonCircleOutline /> {user.name || "Usuario"} {user.lastname || "Anónimo"}
+                        <IoPersonCircleOutline /> Usuario
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>

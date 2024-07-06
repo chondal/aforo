@@ -9,7 +9,7 @@ import PageView from '../helpers/pageView'
 
 const Home = ({user}) => {
     
-    
+    console.log(user)
 
     // const steps = [
     //     {

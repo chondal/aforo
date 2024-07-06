@@ -6,6 +6,7 @@ import { auth } from "../config/firebase";
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { IoLogInOutline, IoHelpBuoyOutline } from "react-icons/io5";
 import LoginLayout from "../layout/LoginLayout";
+import { types } from '../types/types'; // Importa types
 
 const Login = () => {
     const { dispatch } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const Login = () => {
     const logOn = async () => {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, username, password);
-            const action = { type: 'LOGIN', payload: userCredential.user };
+            const action = { type: types.login, payload: { user: userCredential.user, logged: true } };
             dispatch(action);
             navigate('/', { replace: true });
         } catch (error) {
