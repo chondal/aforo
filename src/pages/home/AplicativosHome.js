@@ -1,5 +1,5 @@
 import { IoGridOutline } from "react-icons/io5";
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import { useContext } from "react";
 import { AuthContext } from "../../auth/authContext";
 import AforoCounter from "./aplicativos/AforoCounter";
@@ -8,11 +8,13 @@ import EgresosApp from "./aplicativos/EgresosApp";
 
 
 
-const AplicativosHome = () => {
+const AplicativosHome = ({user}) => {
     
-    const { user } = useContext(AuthContext);
+    //const { user } = useContext(AuthContext);
 
-   
+    const email = user.user.email; 
+const username = email.split('@')[0];
+const usernameCapitalized = username.charAt(0).toUpperCase() + username.slice(1);
 
     const now = new Date();
     
@@ -35,19 +37,32 @@ const AplicativosHome = () => {
 
     return(
         <>
-            <Row className='mb-2'>
-                <Col xs={12}>
-                    <h5 id="bienvenido" className='fw-light border-bottom border-gray pb-2'>
-                        <IoGridOutline /> Bienvenido 
-                    </h5>
-                </Col>
-            </Row>
-            <Row className='mb-2 animate__animated animate__fadeIn animate_fadeOut'>
-            <h6 className="mb-4">{formattedDate}</h6>
-                <AforoCounter user={user} />
+         
+         <Row className='mb-2'>
+         <Col xs={12}>
+    <h5 id="bienvenido" className='fw-light border-bottom border-gray pb-2'>
+        <IoGridOutline /> Bienvenido <span className="fw-bolder"> {usernameCapitalized} </span>
+    </h5>
+</Col>
+</Row>
+<Row className='mb-2 animate__animated animate__fadeIn animate_fadeOut'>
+    <h6 className="mb-4">{formattedDate}</h6>
+    
+    <AforoCounter user={user} />
+    <Container>
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={12} className="d-flex justify-content-center">
                 <IngresosApp />
+            </Col>
+        </Row>
+        <Row className="justify-content-center">
+            <Col xs={12} md={8} lg={12} className="d-flex justify-content-center">
                 <EgresosApp />
-            </Row>
+            </Col>
+        </Row>
+    </Container>
+</Row>
+            
         </>
     )
 }

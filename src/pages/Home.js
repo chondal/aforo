@@ -9,7 +9,7 @@ import PageView from '../helpers/pageView'
 
 const Home = ({user}) => {
     
-    console.log(user)
+    //console.log("usuario",user)
 
 
     // const steps = [
@@ -58,7 +58,7 @@ const Home = ({user}) => {
             <AppLayout>
               <PageView />
                 <Container>
-                    <AplicativosHome />
+                    <AplicativosHome user={user} />
                     
                     {/* {!window.localStorage.getItem('tour') ? (
                       <Joyride

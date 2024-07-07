@@ -9,7 +9,7 @@ const EgresosApp = () => {
                 <Card.Body>
                     <Row>
                         <Col xs={3}>
-                            <IoRemoveCircleOutline size={64} />
+                            <IoRemoveCircleOutline size={50} style={{color: 'red'}} />
                         </Col>
                         <Col xs={9} className="pt-3">
                             <span className="fs-5">Egresos</span>

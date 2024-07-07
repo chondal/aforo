@@ -3,6 +3,7 @@ import { Container, Navbar, Nav, Offcanvas} from 'react-bootstrap'
 import { IoPersonCircleOutline, IoHelpBuoyOutline, IoLogOutOutline, IoInformationCircleOutline } from  "react-icons/io5"
 import { AuthContext } from '../auth/authContext';
 import { types } from '../types/types';
+import { Link } from 'react-router-dom';
 
 const HeaderLayout = () => {
 
@@ -21,8 +22,10 @@ const HeaderLayout = () => {
                 <Container>
                     <Navbar.Toggle className='border-0' aria-controls={`offcanvasNavbar-expand-${false}`} />
                     <Navbar.Brand>
-                        <span className='d-none d-sm-inline'><img src='logo-ecoparque-1.png' alt='Legislatura' height={50} /></span>
-                        <span className='d-block d-sm-none'><img src='logo-ecoparque-1.png' alt='Legislatura' height={50} /></span>
+                    <Link to="/">
+                          <span className='d-none d-sm-inline'><img src='logo-ecoparque-1.png' alt='Legislatura' height={50} /></span>
+                          <span className='d-block d-sm-none'><img src='logo-ecoparque-1.png' alt='Legislatura' height={50} /></span>
+                        </Link>
                     </Navbar.Brand>
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-${false}`}
@@ -31,13 +34,13 @@ const HeaderLayout = () => {
                     >
                     <Offcanvas.Header className='border-bottom border-light bg-light' closeButton>
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${false}`}>
-                        <IoPersonCircleOutline /> Usuario
+                        <IoPersonCircleOutline /> Usuario 
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                         <Nav>
                             <Nav.Link href="/soporte"><IoHelpBuoyOutline /> Soporte</Nav.Link>
-                            <Nav.Link href="/ayuda"><IoInformationCircleOutline /> Sobre LegisApp</Nav.Link>
+                           {/* <Nav.Link href="/ayuda"><IoInformationCircleOutline /> Sobre LegisApp</Nav.Link>*/}
                             {/* <Nav.Link href="/visitas"><IoHome /> Visistas Guiadas</Nav.Link> */}
                             <hr />
                             <Nav.Link onClick={handleLogOut} href="/">

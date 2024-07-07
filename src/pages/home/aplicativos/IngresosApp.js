@@ -8,10 +8,10 @@ const IngresosApp = () => {
     return (
         <Col xs={12} md={6} lg={3}>
             <Card id="ingresos" className='g-0 border-gray shadow-sm mb-4 animate__animated animate__fadeInUp'> 
-                <Card.Body>
-                    <Row>
-                        <Col xs={3}>
-                            <IoAddCircleOutline size={64} />
+                <Card.Body >
+                    <Row >
+                        <Col xs={3} >
+                            <IoAddCircleOutline size={50} style={{color: 'green'}} />
                         </Col>
                         <Col xs={9} className="pt-3">
                             <span className="fs-5">Ingresos</span>

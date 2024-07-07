@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Row, Col, Button, Form } from 'react-bootstrap';
+import { Card, Row, Col, Button, Form, Container } from 'react-bootstrap';
 import { IoAddCircleOutline } from 'react-icons/io5';
 import { db } from '../config/firebase';
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
@@ -7,10 +7,18 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AppLayout from '../layout/AppLayout';
 import AforoCounter from './home/aplicativos/AforoCounter';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../auth/authContext';
 
 const IngresosCounter = () => {
   const [selectedValue, setSelectedValue] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+
+  const { state } = useContext(AuthContext);
+  const { user } = state;
+
+  
 
   const handleButtonClick = (number) => {
     setSelectedValue(number);
@@ -31,13 +39,13 @@ const IngresosCounter = () => {
       cantidad_personas: selectedValue,
       fecha: Timestamp.fromDate(now), // Convertir la fecha actual a un timestamp de Firestore
       tipo_acceso: 'entrada', // Tipo de acceso entrada según tu requerimiento
-      user_id: 'usuario_actual', // Reemplazar con el ID de usuario actual si está autenticado
+      user_id: user.user.uid
     };
 
     try {
       // Guardar los datos en Firestore
       const docRef = await addDoc(collection(db, 'registros'), data);
-      console.log('Documento agregado con ID: ', docRef.id);
+     
       toast.success('Datos guardados exitosamente', { autoClose: 2000 });
 
       // Limpiar el valor seleccionado después de enviar
@@ -57,7 +65,8 @@ const IngresosCounter = () => {
   return (
     <>
       <AppLayout>
-        <Col xs={12} md={6} lg={3}>
+     <Container className='animate__animated animate__fadeInUp' style={{display: 'flex', justifyContent: 'center'}}>
+        <Col xs={12} md={6} lg={6}>
           <AforoCounter/>
           <Card id="ingresos" className='g-0 border-gray shadow-sm mb-4'>
             <Card.Body>
@@ -83,7 +92,7 @@ const IngresosCounter = () => {
                       className='btn-lg border-0'
                       style={{
                         backgroundColor: selectedValue === number ? '#198754' : '#cecece',
-                        color: 'white',
+                        color: selectedValue === number ? 'white' : 'black',
                         width: '100%',
                         marginBottom: '10px'
                       }}
@@ -101,7 +110,7 @@ const IngresosCounter = () => {
                       className='btn-lg border-0'
                       style={{
                         backgroundColor: selectedValue === number ? '#198754' : '#cecece',
-                        color: 'white',
+                        color: selectedValue === number ? 'white' : 'black',
                         width: '100%',
                         marginBottom: '10px'
                       }}
@@ -134,7 +143,7 @@ const IngresosCounter = () => {
                 {selectedValue > 0 && (
                   <Col xs={4}>
                     <Button
-                      className='btn-lg'
+                    className='btn-lg '
                       variant="success"
                       onClick={handleSubmit}
                       disabled={isLoading} // Deshabilitar el botón mientras se está cargando
@@ -147,6 +156,7 @@ const IngresosCounter = () => {
             </Card.Body>
           </Card>
         </Col>
+      </Container>
       </AppLayout>
     </>
   );

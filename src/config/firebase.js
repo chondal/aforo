@@ -4,12 +4,12 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACY4X3ybNJ9c-1OBFqm3CqZ5aA3uRt-WE",
-  authDomain: "aforo-ca3eb.firebaseapp.com",
-  projectId: "aforo-ca3eb",
-  storageBucket: "aforo-ca3eb.appspot.com",
-  messagingSenderId: "695235023785",
-  appId: "1:695235023785:web:61f87962e79fb507162ab8"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // Inicializa Firebase solo si no hay ninguna aplicación inicializada
