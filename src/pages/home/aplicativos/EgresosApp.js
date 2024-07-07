@@ -5,7 +5,7 @@ import { Col, Card, Row } from 'react-bootstrap';
 const EgresosApp = () => {
     return (
         <Col xs={12} md={6} lg={3}>
-            <Card id="egresos" className='g-0 border-gray shadow-sm mb-4'> 
+            <Card id="egresos" className='g-0 border-gray shadow-sm mb-4 animate__animated animate__fadeInUp'> 
                 <Card.Body>
                     <Row>
                         <Col xs={3}>

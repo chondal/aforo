@@ -7,7 +7,7 @@ import { Col, Card, Row } from 'react-bootstrap';
 const IngresosApp = () => {
     return (
         <Col xs={12} md={6} lg={3}>
-            <Card id="ingresos" className='g-0 border-gray shadow-sm mb-4'> 
+            <Card id="ingresos" className='g-0 border-gray shadow-sm mb-4 animate__animated animate__fadeInUp'> 
                 <Card.Body>
                     <Row>
                         <Col xs={3}>

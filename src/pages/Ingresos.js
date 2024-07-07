@@ -82,7 +82,7 @@ const IngresosCounter = () => {
                       key={number}
                       className='btn-lg border-0'
                       style={{
-                        backgroundColor: selectedValue === number ? '#198754' : 'gray',
+                        backgroundColor: selectedValue === number ? '#198754' : '#cecece',
                         color: 'white',
                         width: '100%',
                         marginBottom: '10px'
@@ -100,7 +100,7 @@ const IngresosCounter = () => {
                       key={number}
                       className='btn-lg border-0'
                       style={{
-                        backgroundColor: selectedValue === number ? '#198754' : 'gray',
+                        backgroundColor: selectedValue === number ? '#198754' : '#cecece',
                         color: 'white',
                         width: '100%',
                         marginBottom: '10px'

@@ -84,7 +84,7 @@ const EgresosCounter = () => {
                       key={number}
                       className='btn-lg border-0'
                       style={{
-                        backgroundColor: selectedValue === number ? 'red' : 'gray',
+                        backgroundColor: selectedValue === number ? 'red' : '#cecece',
                         color: 'white',
                         width: '100%',
                         marginBottom: '10px'
@@ -102,7 +102,7 @@ const EgresosCounter = () => {
                       key={number}
                       className='btn-lg border-0'
                       style={{
-                        backgroundColor: selectedValue === number ? 'red' : 'gray',
+                        backgroundColor: selectedValue === number ? 'red' : '#cecece',
                         color: 'white',
                         width: '100%',
                         marginBottom: '10px'
