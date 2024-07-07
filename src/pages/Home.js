@@ -11,6 +11,7 @@ const Home = ({user}) => {
     
     console.log(user)
 
+
     // const steps = [
     //     {
     //       title: '¡Hola, te damos la bienvenida!',

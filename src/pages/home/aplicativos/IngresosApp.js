@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { IoAddCircleOutline, IoBusinessOutline } from "react-icons/io5";
 import { Col, Card, Row } from 'react-bootstrap';
 
+
+
 const IngresosApp = () => {
     return (
         <Col xs={12} md={6} lg={3}>
@@ -15,7 +17,9 @@ const IngresosApp = () => {
                             <span className="fs-5">Ingresos</span>
                             <Link to="/ingresos" className="stretched-link"></Link>
                         </Col>
+                       
                     </Row>
+                    
                 </Card.Body>
             </Card>
         </Col>
