@@ -19,16 +19,16 @@ export const DashboardRouter = () => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Home user={user} />} />
-                <Route path="credencial" element={<Credencial user={user} />} />
+              <Route path="/" element={<Home user={user} />} />
+              <Route path="/*" element={<E404 user={user} />} />
+                {/*<Route path="credencial" element={<Credencial user={user} />} />
                 <Route path="qr" element={<Qr user={user} />} />
                 <Route path="recibos" element={<Recibos user={user} />} />
                 <Route path="dependencias" element={<Dependencias user={user} />} />
                 <Route path="labor" element={<Labor user={user} />} />
                 <Route path="ilcp" element={<Instituto user={user} />} />
                 <Route path="visitas" element={<Visitas user={user} />} />
-                <Route path="ayuda" element={<Help user={user} />} />
-                <Route path="/*" element={<E404 user={user} />} />
+                <Route path="ayuda" element={<Help user={user} />} />*/}
             </Routes>
         </>
     );

@@ -10,6 +10,10 @@ import { DashboardRouter } from './DashboardRouter';
 import { Soporte } from '../pages/Soporte';
 import { Callback } from '../pages/Callback';
 
+
+import IngresosCounter from '../pages/Ingresos';
+import EgresosCounter from '../pages/Egresos';
+
 const MyRoutes = () => {
     return (
         <AuthProvider>
@@ -19,6 +23,18 @@ const MyRoutes = () => {
                     <Route path="/*" element={
                         <PrivateRouter>
                             <DashboardRouter />
+                           
+                        </PrivateRouter>
+                    } />
+                     <Route path="/ingresos" element={
+                        <PrivateRouter>
+                           <IngresosCounter />
+                        </PrivateRouter>
+                    } />
+
+                    <Route path="/egresos" element={
+                        <PrivateRouter>
+                           <EgresosCounter />
                         </PrivateRouter>
                     } />
                     

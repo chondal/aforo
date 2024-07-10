@@ -5,11 +5,11 @@ import { Col, Card, Row } from 'react-bootstrap';
 const EgresosApp = () => {
     return (
         <Col xs={12} md={6} lg={3}>
-            <Card id="egresos" className='g-0 border-gray shadow-sm mb-4'> 
+            <Card id="egresos" className='g-0 border-gray shadow-sm mb-4 animate__animated animate__fadeInUp'> 
                 <Card.Body>
                     <Row>
                         <Col xs={3}>
-                            <IoRemoveCircleOutline size={64} />
+                            <IoRemoveCircleOutline size={50} style={{color: 'red'}} />
                         </Col>
                         <Col xs={9} className="pt-3">
                             <span className="fs-5">Egresos</span>
